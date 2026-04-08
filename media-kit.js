@@ -1,6 +1,6 @@
 (function () {
-  const teal = "#57c1d1";
-  const black = "#0a0a0a";
+  const accent = "#156b5c";
+  const black = "#0d0d0d";
 
   function run() {
     if (typeof Chart === "undefined") return;
@@ -60,8 +60,8 @@
             {
               label: "Unique viewers",
               data: uniqueData,
-              borderColor: teal,
-              backgroundColor: "rgba(87,193,209,0.2)",
+              borderColor: accent,
+              backgroundColor: "rgba(21, 107, 92, 0.2)",
               fill: true,
               tension: 0.25,
               borderWidth: 2,
@@ -94,7 +94,7 @@
           datasets: [
             {
               data: [27.2, 72.8],
-              backgroundColor: [black, teal],
+              backgroundColor: [black, accent],
               borderWidth: 2,
               borderColor: "#fff",
             },
@@ -112,7 +112,7 @@
           datasets: [
             {
               data: [57.5, 42.5],
-              backgroundColor: [black, teal],
+              backgroundColor: [black, accent],
               borderWidth: 2,
               borderColor: "#fff",
             },
