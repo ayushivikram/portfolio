@@ -721,25 +721,46 @@ a.contact-block__value:hover {
 }
 
 .chart-box {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   padding: 1rem;
   border: 1px solid var(--border);
   border-radius: 6px;
   background: var(--surface);
-  min-height: 260px;
+  min-height: 0;
 }
 
 .chart-box h4 {
+  flex-shrink: 0;
   margin: 0 0 0.75rem;
   font-size: 0.8rem;
+  line-height: 1.35;
+  min-height: 2.7em;
   text-transform: uppercase;
   letter-spacing: 0.06em;
+}
+
+.chart-box__plot {
+  position: relative;
+  flex: 1 1 auto;
+  width: 100%;
+  min-height: 240px;
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chart-box__plot canvas {
+  max-width: 100%;
 }
 
 .ig-grid-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
-  align-items: start;
+  align-items: stretch;
 }
 
 @media (max-width: 719px) {

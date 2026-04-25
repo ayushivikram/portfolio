@@ -5,15 +5,24 @@
   function run() {
     if (typeof Chart === "undefined") return;
 
-    const donutOptions = {
+    const igDonutBase = {
       type: "doughnut",
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        cutout: "58%",
+        layout: {
+          padding: { top: 8, right: 10, bottom: 6, left: 10 },
+        },
         plugins: {
           legend: {
             position: "bottom",
-            labels: { boxWidth: 12, font: { size: 11 } },
+            align: "center",
+            labels: {
+              boxWidth: 12,
+              padding: 10,
+              font: { size: 11 },
+            },
           },
         },
       },
@@ -22,7 +31,7 @@
     const elIgFollow = document.getElementById("chart-ig-follow");
     if (elIgFollow) {
       new Chart(elIgFollow, {
-        ...donutOptions,
+        ...igDonutBase,
         data: {
           labels: ["Followers", "Non-followers"],
           datasets: [
@@ -40,7 +49,7 @@
     const elIgGender = document.getElementById("chart-ig-gender");
     if (elIgGender) {
       new Chart(elIgGender, {
-        ...donutOptions,
+        ...igDonutBase,
         data: {
           labels: ["Men", "Women"],
           datasets: [
