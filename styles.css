@@ -641,14 +641,6 @@ a.contact-block__value:hover {
   color: var(--text-muted);
 }
 
-.mk-section__intro {
-  margin: 0 0 1.5rem;
-  max-width: 65ch;
-  font-size: 1.0625rem;
-  line-height: 1.6;
-  color: var(--text-muted);
-}
-
 .mk-shorts-grid {
   list-style: none;
   margin: 0;
