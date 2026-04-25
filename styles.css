@@ -256,12 +256,11 @@ a:hover {
 }
 
 .editorial-hero__photo {
+  display: block;
   width: 100%;
   max-width: 380px;
+  height: auto;
   margin: 0 auto;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  object-position: center 15%;
   border: 1px solid var(--border);
   border-radius: 4px;
   box-shadow: 0 4px 24px rgba(20, 20, 20, 0.08);
@@ -269,10 +268,9 @@ a:hover {
 
 @media (min-width: 900px) {
   .editorial-hero__photo {
-    max-width: none;
-    width: 100%;
-    max-height: min(70vh, 560px);
-    height: auto;
+    width: min(100%, 28rem);
+    max-width: min(100%, 28rem);
+    margin-inline: 0;
   }
 }
 
@@ -558,13 +556,14 @@ a.contact-block__value:hover {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
 }
 
 @media (min-width: 640px) {
   .home-social__grid {
-    grid-template-columns: repeat(4, 1fr);
+    max-width: 28rem;
+    margin-inline: auto;
   }
 }
 
@@ -678,12 +677,12 @@ a.contact-block__value:hover {
 }
 
 .hero-compact__photo {
+  display: block;
+  width: 100%;
+  height: auto;
   border: 1px solid var(--border);
   border-radius: 6px;
   box-shadow: 0 8px 28px rgba(17, 17, 17, 0.08);
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  width: 100%;
 }
 
 .mk-section {
