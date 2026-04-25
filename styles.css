@@ -771,17 +771,42 @@ a.contact-block__value:hover {
   margin-top: 0.35rem;
 }
 
+.mk-content-heading {
+  margin: 1.75rem 0 0.85rem;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
 .mk-content-grid {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15.5rem), 1fr));
   gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+}
+
+/* YouTube + Instagram rows: cap at 2 columns on wide screens */
+@media (min-width: 760px) {
+  .mk-content-grid--youtube,
+  .mk-content-grid--instagram {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Thumbnails: 1 → 2×2 → 4 */
+@media (min-width: 560px) {
+  .mk-content-grid--thumbnails {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (min-width: 1100px) {
-  .mk-content-grid {
+  .mk-content-grid--thumbnails {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
