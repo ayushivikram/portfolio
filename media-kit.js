@@ -1,5 +1,5 @@
 (function () {
-  const accent = "#156b5c";
+  const accent = "#e0527e";
   const black = "#0d0d0d";
 
   function run() {
