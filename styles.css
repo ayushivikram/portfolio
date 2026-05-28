@@ -1,15 +1,15 @@
 /* Ayushi Vikram — portfolio */
 :root {
-  --accent: #156b5c;
-  --accent-hover: #0f5247;
+  --accent: #e0527e;
+  --accent-hover: #c73d68;
   --black: #141414;
   --white: #ffffff;
-  --surface: #f5f6f7;
-  --border: #e2e4e8;
-  --text-muted: #5c6168;
-  --feature-coral: #b85850;
-  --feature-mint: #3d8870;
-  --feature-mustard: #b8922e;
+  --surface: #fff0f5;
+  --border: #f0d0db;
+  --text-muted: #7a5060;
+  --feature-coral: #d64f7a;
+  --feature-mint: #b83a62;
+  --feature-mustard: #e8739a;
   --sans: "DM Sans", system-ui, sans-serif;
   --serif: "Source Serif 4", Georgia, serif;
   --max: 1140px;
@@ -421,7 +421,7 @@ a:hover {
 .home-section--accent {
   margin-top: 0;
   padding: clamp(2rem, 4vw, 3rem) 1.25rem;
-  background: rgba(21, 107, 92, 0.06);
+  background: rgba(224, 82, 126, 0.06);
   border-bottom: 1px solid var(--border);
   border-left: 4px solid var(--accent);
 }
@@ -577,7 +577,7 @@ a.contact-block__value:hover {
 
 /* —— Media kit page —— */
 .page-media .hero-compact {
-  background: linear-gradient(135deg, var(--surface) 0%, rgba(21, 107, 92, 0.08) 100%);
+  background: linear-gradient(135deg, var(--surface) 0%, rgba(224, 82, 126, 0.08) 100%);
   padding: 1.5rem clamp(1rem, 4vw, 1.5rem) 2rem;
   border-bottom: 1px solid var(--border);
 }
@@ -895,7 +895,7 @@ a.contact-block__value:hover {
 .mk-cta__bg {
   position: absolute;
   inset: 0;
-  background: rgba(21, 107, 92, 0.1);
+  background: rgba(224, 82, 126, 0.1);
   clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%);
   z-index: 0;
 }
