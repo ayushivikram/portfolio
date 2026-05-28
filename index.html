@@ -18,11 +18,14 @@
     <header class="site-head">
       <div class="site-head-bar">
         <a class="site-head__logo" href="index.html">Ayushi Vikram</a>
-        <nav class="site-head__nav" aria-label="Primary">
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="site-head__nav" aria-label="Primary" id="site-nav">
           <ul class="site-nav__links">
             <li><a href="index.html" aria-current="page">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li><a href="#projects">Platforms</a></li>
             <li><a href="media-kit.html">Media kit</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
@@ -34,7 +37,7 @@
       <section class="editorial-hero" aria-labelledby="home-heading">
         <div class="editorial-hero__inner">
           <div class="editorial-hero__copy">
-            <h1 class="editorial-hero__display" id="home-heading">Nursing &amp; story</h1>
+            <h1 class="editorial-hero__display" id="home-heading">Nursing &amp; <span class="hero-highlight">story</span></h1>
             <p class="editorial-hero__sub">
               Nursing Honours student · Healthcare content · AIIMS Rishikesh
             </p>
@@ -43,7 +46,7 @@
               life—plus thoughtful collaborations with brands that fit education and wellness.
             </p>
             <div class="editorial-hero__actions">
-              <a class="btn btn--hero-primary" href="#projects">View projects</a>
+              <a class="btn btn--hero-primary" href="#projects">View platforms</a>
               <a class="btn btn--hero-secondary" href="#about">About me</a>
             </div>
           </div>
@@ -95,6 +98,8 @@
         </article>
       </section>
 
+      <div class="section-wave" aria-hidden="true"></div>
+
       <div class="layout-container">
         <section id="about" class="home-section" aria-labelledby="about-title">
           <h2 id="about-title" class="home-section__title">About</h2>
@@ -113,7 +118,7 @@
         </section>
 
         <section id="projects" class="home-section" aria-labelledby="projects-title">
-          <h2 id="projects-title" class="home-section__title">Projects</h2>
+          <h2 id="projects-title" class="home-section__title">My Platforms</h2>
           <p class="home-section__lede">
             Channels, reach, and partnerships—open each card for the live profile or media kit.
           </p>
@@ -198,5 +203,21 @@
     <footer class="site-footer">
       <p>© Ayushi Vikram · <a href="media-kit.html">Media kit</a></p>
     </footer>
+  <script>
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('site-nav');
+    btn.addEventListener('click', () => {
+      const open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      nav.classList.toggle('is-open', !open);
+    });
+    // Close nav when a link is tapped on mobile
+    nav.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        btn.setAttribute('aria-expanded', 'false');
+        nav.classList.remove('is-open');
+      });
+    });
+  </script>
   </body>
 </html>
